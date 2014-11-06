@@ -1,6 +1,6 @@
 {
     "name": "contao-components/chosen",
-    "type": "component",
+    "type": "contao-component",
     "description": "Chosen integration for Contao Open Source CMS",
     "license": "MIT",
     "authors": [
@@ -10,19 +10,6 @@
         }
     ],
     "require": {
-        "robloach/component-installer": "~0.0"
-    },
-    "extra": {
-        "component": {
-            "scripts": [
-                "js/chosen.min.js"
-            ],
-            "styles": [
-                "css/chosen.min.css"
-            ],
-            "files": [
-                "images/*"
-            ]
-        }
+        "contao-components/installer": "~1.0"
     }
 }
