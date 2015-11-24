@@ -88,7 +88,13 @@ var Chosen = new Class({
 
 		}
 
-		this.form_field.setStyle('display', 'none').grab(this.container, 'after');
+		// PATCH: Use opacity:0 instead of display:none; to fix focusable issue in Chrome (see: https://github.com/harvesthq/chosen/issues/2075)
+		this.form_field.setStyles({
+    			opacity: 0,
+    			width: 0,
+    			height: 0,
+    			overflow: 'hidden'})
+    		.grab(this.container, 'after');
 		this.dropdown = this.container.getElement('div.chzn-drop');
 
 		// PATCH: set to 100% and use box-sizing:border-box
