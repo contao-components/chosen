@@ -29,9 +29,7 @@ select.chzn-select {
   -moz-box-sizing   : border-box;
   -webkit-box-sizing: border-box;
   box-sizing        : border-box;
-  -webkit-border-radius: 0 0 3px 3px;
-  -moz-border-radius   : 0 0 3px 3px;
-  border-radius        : 0 0 3px 3px;
+  border-radius     : 0 0 2px 2px;
   /* PATCH EOF */
 }
 /* @end */
@@ -49,9 +47,7 @@ select.chzn-select {
   background-image: linear-gradient(top, #eeeeee 0%,#ffffff 50%);
   */
   /* PATCH: 3px instead of 4px */
-  -webkit-border-radius: 3px;
-  -moz-border-radius   : 3px;
-  border-radius        : 3px;
+  border-radius: 2px;
   -moz-background-clip   : padding;
   -webkit-background-clip: padding-box;
   background-clip        : padding-box;
@@ -60,19 +56,14 @@ select.chzn-select {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  height: 20px; /* PATCH: 20px instead of 26px */
-  line-height: 20px; /* PATCH: 20px instead of 26px */
-  padding: 0 3px; /* PATCH: 3px instead of 8px */
-  color: #555; /* PATCH: #555 instead of #444 */
+  height: 28px; /* PATCH: 28px instead of 26px */
+  line-height: 28px; /* PATCH: 28px instead of 26px */
+  padding: 0 6px; /* PATCH: 3px instead of 8px */
+  color: #333; /* PATCH: #333 instead of #444 */
   text-decoration: none;
 }
-/* PATCH */
-.firefox .chzn-container-single .chzn-single {
-  top:1px;
-}
-/* PATCH EOF */
 .chzn-container-single .chzn-single > span { /* PATCH see 3835 */
-  margin-right: 26px;
+  margin-right: 15px; /* PATCH: 15px instead of 26px */
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -80,8 +71,7 @@ select.chzn-select {
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
   /* PATCH */
-  font-family:"Trebuchet MS",Verdana,sans-serif;
-  font-size:12px;
+  font-size:.875rem;
   /* PATCH EOF */
 }
 .chzn-container-single .chzn-single div {
@@ -93,6 +83,7 @@ select.chzn-select {
   -moz-background-clip   : padding;
   -webkit-background-clip: padding-box;
   background-clip        : padding-box;
+  /* PATCH
   background: #ccc;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));
   background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);
@@ -102,15 +93,16 @@ select.chzn-select {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#eeeeee', GradientType=0);
   background-image: linear-gradient(top, #cccccc 0%,#eeeeee 60%);
   border-left: 1px solid #aaa;
+  */
   position: absolute;
   right: 0;
   top: 0;
   display: block;
   height: 100%;
-  width: 15px; /* PATCH: 15px instead of 18px */
+  width: 22px; /* PATCH: 22px instead of 18px */
 }
 .chzn-container-single .chzn-single div b {
-  background: url("../images/chosen-sprite.png") no-repeat -1px -2px; /* PATCH: -1px -2px instead of 0 1px */
+  background: url("../images/chosen-sprite.png") no-repeat 3px 2px; /* PATCH: 3px 2px instead of 0 1px */
   display: block;
   width: 100%;
   height: 100%;
@@ -122,16 +114,19 @@ select.chzn-select {
 }
 .chzn-container-single .chzn-search input {
   background: #fff url("../images/chosen-sprite.png") no-repeat 100% -20px;
+  /* PATCH
   background: url("../images/chosen-sprite.png") no-repeat 100% -20px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
   background: url("../images/chosen-sprite.png") no-repeat 100% -20px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
   background: url("../images/chosen-sprite.png") no-repeat 100% -20px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
   background: url("../images/chosen-sprite.png") no-repeat 100% -20px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
   background: url("../images/chosen-sprite.png") no-repeat 100% -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
   background: url("../images/chosen-sprite.png") no-repeat 100% -20px, linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  */
   margin: 1px 0;
   padding: 4px 20px 4px 5px;
   outline: 0;
   border: 1px solid #aaa;
+  border-radius: 2px;
   /* PATCH
   font-family: sans-serif;
   font-size: 1em;
@@ -143,10 +138,8 @@ select.chzn-select {
   /* PATCH EOF */
 }
 .chzn-container-single .chzn-drop {
-  /* PATCH: 3px instead of 4px */
-  -webkit-border-radius: 0 0 3px 3px;
-  -moz-border-radius   : 0 0 3px 3px;
-  border-radius        : 0 0 3px 3px;
+  /* PATCH: 2px instead of 4px */
+  border-radius: 0 0 2px 2px;
   -moz-background-clip   : padding;
   -webkit-background-clip: padding-box;
   background-clip        : padding-box;
@@ -178,9 +171,7 @@ select.chzn-select {
   padding:1px 0;
   overflow-x:hidden;
   overflow-y:auto;
-  -webkit-border-radius: 3px;
-  -moz-border-radius   : 3px;
-  border-radius        : 3px;
+  border-radius: 2px;
   /* PATCH EOF */
 }
 .chzn-container-multi .chzn-choices li {
@@ -292,8 +283,8 @@ select.chzn-select {
 }
 .chzn-container .chzn-results .group-result {
   cursor: default;
-  color: #999;
-  font-weight: bold;
+  color: #333;
+  font-weight: 500;
 }
 .chzn-container .chzn-results .group-option {
   padding-left: 20px;
@@ -343,7 +334,7 @@ select.chzn-select {
   border-left: none;
 }
 .chzn-container-active .chzn-single-with-drop div b {
-  background-position: -19px -1px; /* PATCH: -19px -1px instead of -18px 1px */
+  background-position: -15px 2px; /* PATCH: -15px 2px instead of -18px 1px */
 }
 .chzn-container-active .chzn-choices {
   /* PATCH
@@ -353,9 +344,7 @@ select.chzn-select {
   box-shadow        : 0 0 5px rgba(0,0,0,.3);
   border: 1px solid #5897fb;
   */
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius   : 3px 3px 0 0;
-  border-radius        : 3px 3px 0 0;
+  border-radius: 2px 2px 0 0;
   /* PATCH EOF */
 }
 .chzn-container-active .chzn-choices .search-field input {
@@ -371,10 +360,8 @@ select.chzn-select {
   left: 0; right: auto;
   border-left: none;
   border-right: 1px solid #aaa;
-  /* PATCH: 3px instead of 4px */
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius   : 3px 0 0 3px;
-  border-radius        : 3px 0 0 3px;
+  /* PATCH: 2px instead of 4px */
+  border-radius: 2px 0 0 2px;
 }
 .chzn-rtl .chzn-choices li { float: right; }
 .chzn-rtl .chzn-choices .search-choice { padding: 3px 6px 3px 19px; margin: 3px 5px 3px 0; }
@@ -384,6 +371,7 @@ select.chzn-select {
 .chzn-rtl.chzn-container-active .chzn-single-with-drop div { border-right: none; }
 .chzn-rtl .chzn-search input {
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, #ffffff;
+  /* PATCH
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
@@ -391,6 +379,7 @@ select.chzn-select {
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  */
   padding: 4px 5px 4px 20px;
 }
 /* @end */
