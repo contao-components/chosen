@@ -63,7 +63,7 @@ select.chzn-select {
   text-decoration: none;
 }
 .chzn-container-single .chzn-single > span { /* PATCH see 3835 */
-  margin-right: 15px; /* PATCH: 15px instead of 26px */
+  margin-right: 18px; /* PATCH: 18px instead of 26px */
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -99,7 +99,7 @@ select.chzn-select {
   top: 0;
   display: block;
   height: 100%;
-  width: 22px; /* PATCH: 22px instead of 18px */
+  width: 24px; /* PATCH: 24px instead of 18px */
 }
 .chzn-container-single .chzn-single div b {
   background: url("../images/down.svg") no-repeat center;
