@@ -304,8 +304,15 @@ select.chzn-select {
   box-shadow        : 0 0 5px rgba(0,0,0,.3);
   border: 1px solid #5897fb;
   */
-  background-color: #ebfdd7;
 }
+/* PATCH */
+@media (-webkit-min-device-pixel-ratio:0) {
+  .chzn-container-active .chzn-single {
+    outline: -webkit-focus-ring-color auto 5px;
+    outline-offset: -2px;
+  }
+}
+/* PATCH EOF */
 .chzn-container-active .chzn-single-with-drop {
   border: 1px solid #aaa;
   -webkit-box-shadow: 0 1px 0 #fff inset;
