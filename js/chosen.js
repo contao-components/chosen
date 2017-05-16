@@ -977,12 +977,20 @@ var SelectParser = new Class({
 					this.parsed[group_position].children += 1;
 				}
 
+				var opt = option.get("html"),
+					idx = opt.lastIndexOf("[");
+
+				// PATCH: Contao-specific replacements
+				if (idx != -1) {
+					opt = opt.substr(0, idx) + '<span style="color:#999;padding-left:3px">' + opt.substr(idx, opt.length) + '</span>';
+				}
+
 				this.parsed.push({
 					array_index: this.parsed.length,
 					options_index: this.options_index,
 					value: option.get("value"),
 					text: option.get("text").trim(),
-					html: option.get("html").replace('[', '<span style="color:#999;padding-left:3px">[').replace(']', ']</span>'), // PATCH: Contao-specific replacements
+					html: opt,
 					selected: option.selected,
 					disabled: group_disabled === true ? group_disabled : option.disabled,
 					group_array_index: group_position
