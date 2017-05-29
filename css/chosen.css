@@ -284,7 +284,7 @@ select.chzn-select {
 .chzn-container .chzn-results .group-result {
   cursor: default;
   color: #333;
-  font-weight: 500;
+  font-weight: bold;
 }
 .chzn-container .chzn-results .group-option {
   padding-left: 20px;
