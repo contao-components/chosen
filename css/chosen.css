@@ -10,8 +10,8 @@ select.chzn-select {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  margin:1px 0; /* PATCH */
-  background-color:#fff; /* PATCH */
+  margin: 1px 0; /* PATCH */
+  background-color: #fff; /* PATCH */
 }
 .chzn-container .chzn-drop {
   background: #fff;
@@ -59,7 +59,7 @@ select.chzn-select {
   height: 28px; /* PATCH: 28px instead of 26px */
   line-height: 28px; /* PATCH: 28px instead of 26px */
   padding: 0 6px; /* PATCH: 3px instead of 8px */
-  color: #333; /* PATCH: #333 instead of #444 */
+  color: #222; /* PATCH: #222 instead of #444 */
   text-decoration: none;
 }
 .chzn-container-single .chzn-single > span { /* PATCH see 3835 */
@@ -268,7 +268,7 @@ select.chzn-select {
   cursor: pointer;
 }
 .chzn-container .chzn-results .highlighted {
-  background: #3875d7;
+  background: #3997fe; /* PATCH: #3997fe instead of #3875d7 */
   color: #fff;
 }
 .chzn-container .chzn-results li em {
@@ -283,7 +283,7 @@ select.chzn-select {
 }
 .chzn-container .chzn-results .group-result {
   cursor: default;
-  color: #333;
+  color: #222;
   font-weight: bold;
 }
 .chzn-container .chzn-results .group-option {
