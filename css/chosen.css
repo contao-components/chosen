@@ -284,7 +284,12 @@ select.chzn-select {
 .chzn-container .chzn-results .group-result {
   cursor: default;
   color: #222;
-  font-weight: bold;
+  font-weight: 600;
+}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+  .chzn-container .chzn-results .group-result {
+    font-weight: 500;
+  }
 }
 .chzn-container .chzn-results .group-option {
   padding-left: 20px;
