@@ -636,7 +636,7 @@ var Chosen = new Class({
 					document.id(option.dom_id).setStyle('display', 'none');
 				}else if (!(this.is_multiple && option.selected)){
 					found = false;
-					result_id = option.dom_id
+					result_id = option.dom_id;
 
 					if (regex.test(option.text)){
 						found = true;
@@ -657,17 +657,18 @@ var Chosen = new Class({
 
 					if (found){
 
-						if (searchText.length){
+						// PATCH: do not highlight, it will break existing HTML (see contao/contao#397)
+						// if (searchText.length){
 
-							startpos = option.html.search(zregex);
-							text = option.html.substr(0, startpos + searchText.length) + '</em>' + option.html.substr(startpos + searchText.length);
-							text = text.substr(0, startpos) + '<em>' + text.substr(startpos);
+							// startpos = option.html.search(zregex);
+							// text = option.html.substr(0, startpos + searchText.length) + '</em>' + option.html.substr(startpos + searchText.length);
+							// text = text.substr(0, startpos) + '<em>' + text.substr(startpos);
 
-						} else {
+						// } else {
 
 							text = option.html;
 
-						}
+						// }
 
 						if (document.id(result_id).get('html') !== text){
 							document.id(result_id).set('html', text);
