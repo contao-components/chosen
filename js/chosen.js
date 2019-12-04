@@ -416,7 +416,6 @@ var Chosen = new Class({
 			"top": dd_top,
 			"left": 0
 		});
-		this.container.setStyle('overflow', 'initial');
 
 		this.results_showing = true;
 		this.search_field.focus();
@@ -434,7 +433,6 @@ var Chosen = new Class({
 
 		this.result_clear_highlight();
 		this.dropdown.setStyle('left', -9000);
-		this.container.setStyle('overflow', 'hidden');
 
 		this.results_showing = false;
 

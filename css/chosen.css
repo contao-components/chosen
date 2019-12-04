@@ -12,7 +12,6 @@ select.chzn-select {
   *display: inline;
   margin: 1px 0; /* PATCH */
   background-color: #fff; /* PATCH */
-  overflow: hidden; /* PATCH */
 }
 .chzn-container .chzn-drop {
   background: #fff;
