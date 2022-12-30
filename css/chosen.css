@@ -1,3 +1,17 @@
+:root {
+  --text: #222;
+  --form-border: #aaa;
+  --form-bg: #fff;
+  --active-border: #e7b36a;
+  --highlighted: #3997fe;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --highlighted: #1b325f;
+  }
+}
+
 /* @group Base */
 select.chzn-select {
   visibility: hidden;
@@ -11,11 +25,11 @@ select.chzn-select {
   zoom: 1;
   *display: inline;
   margin: 1px 0; /* PATCH */
-  background-color: #fff; /* PATCH */
+  background-color: var(--form-bg); /* PATCH */
 }
 .chzn-container .chzn-drop {
-  background: #fff;
-  border: 1px solid #aaa;
+  background: var(--form-bg);
+  border: 1px solid var(--form-border);
   border-top: 0;
   position: absolute;
   top: 29px;
@@ -51,7 +65,7 @@ select.chzn-select {
   -moz-background-clip   : padding;
   -webkit-background-clip: padding-box;
   background-clip        : padding-box;
-  border: 1px solid #aaa;
+  border: 1px solid var(--form-border);
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -59,8 +73,11 @@ select.chzn-select {
   height: 28px; /* PATCH: 28px instead of 26px */
   line-height: 28px; /* PATCH: 28px instead of 26px */
   padding: 0 6px; /* PATCH: 3px instead of 8px */
-  color: #222; /* PATCH: #222 instead of #444 */
+  color: var(--text); /* PATCH: #222 instead of #444 */
   text-decoration: none;
+}
+.chzn-container-single.active .chzn-single {
+  border-color: var(--active-border);
 }
 .chzn-container-single .chzn-single > span { /* PATCH see 3835 */
   margin-right: 18px; /* PATCH: 18px instead of 26px */
@@ -113,7 +130,7 @@ select.chzn-select {
   white-space: nowrap;
 }
 .chzn-container-single .chzn-search input {
-  background: #fff url("../images/magnify.svg") no-repeat right 3px center;
+  background: var(--form-bg) url("../images/magnify.svg") no-repeat right 3px center;
   /* PATCH
   background: url("../images/chosen-sprite.png") no-repeat 100% -20px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
   background: url("../images/chosen-sprite.png") no-repeat 100% -20px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
@@ -125,7 +142,7 @@ select.chzn-select {
   margin: 1px 0;
   padding: 4px 20px 4px 5px;
   outline: 0;
-  border: 1px solid #aaa;
+  border: 1px solid var(--form-border);
   border-radius: 2px;
   /* PATCH
   font-family: sans-serif;
@@ -148,7 +165,7 @@ select.chzn-select {
 
 /* @group Multi Chosen */
 .chzn-container-multi .chzn-choices {
-  background-color: #fff;
+  background-color: var(--form-bg);
   /* PATCH
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
   background-image: -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
@@ -158,7 +175,7 @@ select.chzn-select {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
   background-image: linear-gradient(top, #ffffff 85%,#eeeeee 99%);
   */
-  border: 1px solid #aaa;
+  border: 1px solid var(--form-border);
   margin: 0;
   padding: 0;
   cursor: text;
@@ -268,7 +285,7 @@ select.chzn-select {
   cursor: pointer;
 }
 .chzn-container .chzn-results .highlighted {
-  background: #3997fe; /* PATCH: #3997fe instead of #3875d7 */
+  background: var(--highlighted); /* PATCH: #3997fe instead of #3875d7 */
   color: #fff;
 }
 .chzn-container .chzn-results li em {
@@ -278,12 +295,14 @@ select.chzn-select {
 .chzn-container .chzn-results .highlighted em {
   background: transparent;
 }
+/* PATCH
 .chzn-container .chzn-results .no-results {
   background: #f4f4f4;
 }
+*/
 .chzn-container .chzn-results .group-result {
   cursor: default;
-  color: #222;
+  color: var(--text);
   font-weight: 600;
 }
 @media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
@@ -318,12 +337,12 @@ select.chzn-select {
 }
 /* PATCH EOF */
 .chzn-container-active .chzn-single-with-drop {
-  border: 1px solid #aaa;
+  border: 1px solid var(--form-border);
+  /* PATCH
   -webkit-box-shadow: 0 1px 0 #fff inset;
   -moz-box-shadow   : 0 1px 0 #fff inset;
   -o-box-shadow     : 0 1px 0 #fff inset;
   box-shadow        : 0 1px 0 #fff inset;
-  /* PATCH
   background-color: #eee;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));
   background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%);
@@ -358,9 +377,11 @@ select.chzn-select {
   border-radius: 2px 2px 0 0;
   /* PATCH EOF */
 }
+/* PATCH
 .chzn-container-active .chzn-choices .search-field input {
   color: #111 !important;
 }
+*/
 /* @end */
 
 /* @group Right to Left */
@@ -370,7 +391,7 @@ select.chzn-select {
 .chzn-rtl .chzn-single div {
   left: 0; right: auto;
   border-left: none;
-  border-right: 1px solid #aaa;
+  border-right: 1px solid var(--form-border);
   /* PATCH: 2px instead of 4px */
   border-radius: 2px 0 0 2px;
 }
@@ -381,7 +402,7 @@ select.chzn-select {
 .chzn-rtl .chzn-results .group-option { padding-left: 0; padding-right: 20px; }
 .chzn-rtl.chzn-container-active .chzn-single-with-drop div { border-right: none; }
 .chzn-rtl .chzn-search input {
-  background: url("../images/chosen-sprite.png") no-repeat -38px -20px, #ffffff;
+  background: url("../images/chosen-sprite.png") no-repeat -38px -20px, var(--form-bg);
   /* PATCH
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
   background: url("../images/chosen-sprite.png") no-repeat -38px -20px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
