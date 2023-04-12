@@ -2,7 +2,6 @@
     --text: #222;
     --form-border: #aaa;
     --form-bg: #fff;
-    --active-border: #e7b36a;
     --chosen-bg: #eee;
     --chosen-border: #bbb;
     --chosen-highlighted: #3997fe;
@@ -13,7 +12,6 @@ html[data-color-scheme="dark"] {
     --text: #ddd;
     --form-border: #44464b;
     --form-bg: #151619;
-    --active-border: #264787;
     --chosen-bg: #27292f;
     --chosen-border: #464853;
     --chosen-highlighted: #1b325f;
@@ -61,10 +59,6 @@ select.chzn-select {
     padding: 0 6px;
     color: var(--text);
     text-decoration: none;
-}
-
-.chzn-container-single.active .chzn-single {
-    border-color: var(--active-border);
 }
 
 .chzn-container-single .chzn-single > span {
