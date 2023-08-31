@@ -483,8 +483,8 @@ var Chosen = new Class({
             this.search_field.set('value', "");
             this.form_field.fireEvent("change");
 
-            // PATCH: fireEvent seems to be missing the onchange attribute
-            if (typeof(this.form_field.onchange) == 'function') this.form_field.onchange();
+            // PATCH: trigger native change event
+            this.form_field.dispatchEvent(new Event("change"));
 
             this.search_field_scale();
         }
